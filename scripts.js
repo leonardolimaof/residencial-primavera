@@ -37,20 +37,6 @@ select.addEventListener('change', function() {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
-document.getElementById('btnCompartilharNoWhatsApp').addEventListener('click', function() {
-  // Capturar o elemento container
-  const container = document.querySelector('.container');
-
-  // Usar html2canvas para capturar o conteúdo do container como uma imagem
-  html2canvas(container).then(canvas => {
-    // Converter o canvas para uma imagem PNG
-    const imgData = canvas.toDataURL('image/png');
-
-    // Abrir uma janela para compartilhar no WhatsApp
-    window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent('Confira este conteúdo:') + '&amp;image=' + imgData);
-  });
-});
 
 document.getElementById('btnSalvarComoJPG').addEventListener('click', function() {
   // Capturar o elemento container
@@ -68,28 +54,24 @@ document.getElementById('btnSalvarComoJPG').addEventListener('click', function()
     link.click(); // Simular o clique no link para iniciar o download
   });
 });
+
+
+
+//API para compartilhar container como imagem no WhatsApp.
+
+document.getElementById('btnCompartilharNoWhatsApp').addEventListener('click', function() {
+  // Capturar o elemento container
+  const container = document.querySelector('.container');
+
+  // Usar html2canvas para capturar o conteúdo do container como uma imagem
+  html2canvas(container).then(canvas => {
+    // Converter o canvas para uma imagem PNG
+    const imgData = canvas.toDataURL('image/png');
+
+    // Abrir uma janela para compartilhar no WhatsApp usando a API
+    window.open(`https://wa.me/?text=Confira%20este%20conteúdo%3A&media=${imgData}`, '_blank');
+  }).catch(error => {
+    alert('Erro ao compartilhar no WhatsApp: ' + error.message);
+  });
 });
 
-
-
-// Função para atualizar o resumo financeiro
-
-function updateFinancialSummary() {
-  var valorTotal = 0;
-  var valorRestante = 800; // Inicialmente, o valor restante é 800 (16 apartamentos * R$50 cada)
-
-  // Loop sobre os elementos select
-  var selects = document.querySelectorAll('select');
-  selects.forEach(function(select) {
-    var status = select.value;
-    if (status === 'pago') {
-      valorTotal += 50; // Adiciona R$50 ao valor total para cada apartamento pago
-    } else {
-      valorRestante -= 50; // Subtrai R$50 do valor restante para cada apartamento não pago ou atrasado
-    }
-  });
-
-  // Atualiza os elementos na página
-  document.getElementById('valorTotal').textContent = valorTotal.toFixed(2);
-  document.getElementById('valorRestante').textContent = valorRestante.toFixed(2);
-}
