@@ -470,10 +470,34 @@
     </select>
     </div>
   </div>
-  <button class="btn btn-success" id="btnCompartilharNoWhatsApp">Compartilhar no WhatsApp</button>
-  <button class="btn btn-primary" id="btnSalvarComoJPG">Salvar como JPG</button>
+
+  <!-- <button class="btn btn-success" id="btnCompartilharNoWhatsApp">Compartilhar no WhatsApp</button> -->
+  <button class="btn btn-primary m-3" id="btnSalvarComoJPG">Salvar Imagem!</button>
 
 </div>
+
+<div class="container mt-5">
+  <h2>Resumo Financeiro</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Título</th>
+        <th scope="col">Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Valor Total</td>
+        <td id="valorTotal"></td>
+      </tr>
+      <tr>
+        <td>Valor Restante</td>
+        <td id="valorRestante"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 
 <footer class="footer mt-auto py-3">
   <div class="container">
@@ -482,13 +506,15 @@
         <p class="mb-0">Leonardo Lima - Todos os direitos reservados</p>
       </div>
       <div class="col-md-6 text-md-end">
-        <p class="mb-0">Versão 1.01</p>
+        <p class="mb-0">Versão 1.03</p>
       </div>
     </div>
   </div>
 </footer>
 
 <script src="html2canvas.js"></script>
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <!-- Bootstrap JS and jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
