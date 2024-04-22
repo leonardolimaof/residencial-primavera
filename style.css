@@ -1,0 +1,33 @@
+body {
+    background-image: url(img/back.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .container {
+    background: linear-gradient(45deg, #4CAF50, #2E8B57);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+
+  .highlight {
+    background: linear-gradient(45deg, #8BC34A, #388E3C);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* Estilos para os diferentes status */
+.status-pago {
+  color: green;
+}
+
+.status-naoPago {
+  color: red;
+}
+
+.status-atrasado {
+  color: orange;
+}

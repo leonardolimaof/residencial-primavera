@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Residentes</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container mt-5 text-center">
+  <img src="logo.png" alt="LogoMarca" style="height: 300px;">
+  <h2>Lista de Residentes</h2>
+  <p>Vencimento todo dia <strong>15</strong>. Pagamento disponivel apartir do dia <strong>01</strong> de todo mês!</p>
+  <div class="highlight">
+    <div class="row mb-2">
+      <div class="col">Apartamento</div>
+      <div class="col">Nome do Dono</div>
+      <div class="col">Telefone</div>
+      <div class="col">Contador de Atrasos</div>
+      <div class="col">Status</div>
+    </div>
+  </div>
+  <!-- Apartamento 101 -->
+  <div class="row mb-2">
+    <div class="col">101</div>
+    <div class="col">Leo Dulers</div>
+    <div class="col">(85)9.8627-8254</div>
+    <div class="col">
+    <select class="form-control" id="atraso_apartamento_101" name="atraso" data-apartamento="101">
+      <option value="0">Em Dias</option>
+      <option value="1">1 Mês atrasado</option>
+      <option value="2">2 Meses atrasados</option>
+      <option value="3">3 Meses atrasados</option>
+      <option value="4">4 Meses atrasados</option>
+      <option value="5">5 Meses atrasados</option>
+      <option value="6">6 Meses atrasados</option>
+      <option value="7">7 Meses atrasados</option>
+      <option value="8">8 Meses atrasados</option>
+      <option value="9">9 Meses atrasados</option>
+      <option value="10">10 Meses atrasados</option>
+    </select>
+  </div>
+    <div class="col">
+      <select class="form-control" data-apartment="101" onchange="saveStatus('101', this.value)">
+        <option value="pago" class="status-pago">Pago</option>
+      <option value="naoPago" class="status-naoPago">Não Pago</option>
+      <option value="atrasado" class="status-atrasado">Atrasado</option>
+    </select>
+    </div>
+  </div>
+  <!-- Apartamento 102 -->
+  <div class="row mb-2">
+    <div class="col">102</div>
+    <div class="col">Claudenia</div>
+    <div class="col">(85)9.8868-8382</div>
+    <div class="col">
+    <select class="form-control" id="atraso_apartamento_102" name="atraso" data-apartamento="102">
+      <option value="0">Em Dias</option>
+      <option value="1">1 Mês atrasado</option>
+      <option value="2">2 Meses atrasados</option>
+      <option value="3">3 Meses atrasados</option>
+      <option value="4">4 Meses atrasados</option>
+      <option value="5">5 Meses atrasados</option>
+      <option value="6">6 Meses atrasados</option>
+      <option value="7">7 Meses atrasados</option>
+      <option value="8">8 Meses atrasados</option>
+      <option value="9">9 Meses atrasados</option>
+      <option value="10">10 Meses atrasados</option>
+    </select>
+  </div>
+    <div class="col">
+      <select class="form-control" data-apartment="102" onchange="saveStatus('102', this.value)">
+        <option value="pago" class="status-pago">Pago</option>
+      <option value="naoPago" class="status-naoPago">Não Pago</option>
+      <option value="atrasado" class="status-atrasado">Atrasado</option>
+    </select>
+    </div>
+  </div>
+  <!-- Apartamento 103 -->
+  <div class="row mb-2">
+    <div class="col">103</div>
+    <div class="col">Carla</div>
+    <div class="col">(85)9.8827-5898</div>
+    <div class="col">
+    <select class="form-control" id="atraso_apartamento_103" name="atraso" data-apartamento="103">
+      <option value="0">Em Dias</option>
+      <option value="1">1 Mês atrasado</option>
+      <option value="2">2 Meses atrasados</option>
+      <option value="3">3 Meses atrasados</option>
+      <option value="4">4 Meses atrasados</option>
+      <option value="5">5 Meses atrasados</option>
+      <option value="6">6 Meses atrasados</option>
+      <option value="7">7 Meses atrasados</option>
+      <option value="8">8 Meses atrasados</option>
+      <option value="9">9 Meses atrasados</option>
+      <option value="10">10 Meses atrasados</option>
+    </select>
+  </div>
+    <div class="col">
+      <select class="form-control" data-apartment="103" onchange="saveStatus('103', this.value)">
+        <option value="pago" class="status-pago">Pago</option>
+      <option value="naoPago" class="status-naoPago">Não Pago</option>
+      <option value="atrasado" class="status-atrasado">Atrasado</option>
+    </select>
+    </div>
+  </div>
+  <!-- Apartamento 104 -->
+  <div class="row mb-2">
+    <div class="col">104</div>
+    <div class="col">Renan Mello</div>
+    <div class="col">(85)9.9709-5796</div>
+    <div class="col">
+    <select class="form-control" id="atraso_apartamento_104" name="atraso" data-apartamento="104">
+      <option value="0">Em Dias</option>
+      <option value="1">1 Mês atrasado</option>
+      <option value="2">2 Meses atrasados</option>
+      <option value="3">3 Meses atrasados</option>
+      <option value="4">4 Meses atrasados</option>
+      <option value="5">5 Meses atrasados</option>
+      <option value="6">6 Meses atrasados</option>
+      <option value="7">7 Meses atrasados</option>
+      <option value="8">8 Meses atrasados</option>
+      <option value="9">9 Meses atrasados</option>
+      <option value="10">10 Meses atrasados</option>
+    </select>
+  </div>
+    <div class="col">
+      <select class="form-control" data-apartment="104" onchange="saveStatus('104', this.value)">
+        <option value="pago" class="status-pago">Pago</option>
+      <option value="naoPago" class="status-naoPago">Não Pago</option>
+      <option value="atrasado" class="status-atrasado">Atrasado</option>
+    </select>
+    </div>
+  </div>
+  <!-- Apartamento 201 -->
+  <div class="row mb-2">
+    <div class="col">201</div>
+    <div class="col">Josy Duarte</div>
+    <div class="col">(85)9.9251-3885</div>
+    <div class="col">
+    <select class="form-control" id="atraso_apartamento_201" name="atraso" data-apartamento="201">
+      <option value="0">Em Dias</option>
+      <option value="1">1 Mês atrasado</option>
+      <option value="2">2 Meses atrasados</option>
+      <option value="3">3 Meses atrasados</option>
+      <option value="4">4 Meses atrasados</option>
+      <option value="5">5 Meses atrasados</option>
+      <option value="6">6 Meses atrasados</option>
+      <option value="7">7 Meses atrasados</option>
+      <option value="8">8 Meses atrasados</option>
+      <option value="9">9 Meses atrasados</option>
+      <option value="10">10 Meses atrasados</option>
+    </select>
+  </div>
+    <div class="col">
+      <select class="form-control" data-apartment="201" onchange="saveStatus('201', this.value)">
+            <option value="pago">Pago</option>
+            <option value="naoPago">Não Pago</option>
+            <option value="atrasado">Atrasado</option>
+        </select>
+    </div>
+  </div>
+  <!-- Apartamento 202 -->
+  <div class="row mb-2">
+    <div class="col">202</div>
+    <div class="col">Júnior</div>
+    <div class="col">(85)9.9613-9540</div>
+    <div class="col">
+    <select class="form-control" id="atraso_apartamento_202" name="atraso" data-apartamento="202">
+      <option value="0">Em Dias</option>
+      <option value="1">1 Mês atrasado</option>
+      <option value="2">2 Meses atrasados</option>
+      <option value="3">3 Meses atrasados</option>
+      <option value="4">4 Meses atrasados</option>
+      <option value="5">5 Meses atrasados</option>
+      <option value="6">6 Meses atrasados</option>
+      <option value="7">7 Meses atrasados</option>
+      <option value="8">8 Meses atrasados</option>
+      <option value="9">9 Meses atrasados</option>
+      <option value="10">10 Meses atrasados</option>
+    </select>
+  </div>
+    <div class="col">
+      <select class="form-control" data-apartment="202" onchange="saveStatus('202', this.value)">
+        <option value="pago" class="status-pago">Pago</option>
+      <option value="naoPago" class="status-naoPago">Não Pago</option>
+      <option value="atrasado" class="status-atrasado">Atrasado</option>
+    </select>
+    </div>
+  </div>
+  <!-- Apartamento 203 -->
+  <div class="row mb-2">
+    <div class="col">203</div>
+    <div class="col">Rita</div>
+    <div class="col">(85)9.9667-6406</div>
+    <div class="col">
+    <select class="form-control" id="atraso_apartamento_203" name="atraso" data-apartamento="203">
+      <option value="0">Em Dias</option>
+      <option value="1">1 Mês atrasado</option>
+      <option value="2">2 Meses atrasados</option>
+      <option value="3">3 Meses atrasados</option>
+      <option value="4">4 Meses atrasados</option>
+      <option value="5">5 Meses atrasados</option>
+      <option value="6">6 Meses atrasados</option>
+      <option value="7">7 Meses atrasados</option>
+      <option value="8">8 Meses atrasados</option>
+      <option value="9">9 Meses atrasados</option>
+      <option value="10">10 Meses atrasados</option>
+    </select>
+  </div>
+    <div class="col">
+      <select class="form-control" data-apartment="203" onchange="saveStatus('203', this.value)">
+        <option value="pago" class="status-pago">Pago</option>
+      <option value="naoPago" class="status-naoPago">Não Pago</option>
+      <option value="atrasado" class="status-atrasado">Atrasado</option>
+    </select>
+    </div>
+  </div>
+  <!-- Apartamento 204 -->
+  <div class="row mb-2">
+    <div class="col">204</div>
+    <div class="col">Iara Marciel</div>
+    <div class="col">(85)9.9611-4005</div>
+    <div class="col">
+    <select class="form-control" id="atraso_apartamento_204" name="atraso" data-apartamento="204">
+      <option value="0">Em Dias</option>
+      <option value="1">1 Mês atrasado</option>
+      <option value="2">2 Meses atrasados</option>
+      <option value="3">3 Meses atrasados</option>
+      <option value="4">4 Meses atrasados</option>
+      <option value="5">5 Meses atrasados</option>
+      <option value="6">6 Meses atrasados</option>
+      <option value="7">7 Meses atrasados</option>
+      <option value="8">8 Meses atrasados</option>
+      <option value="9">9 Meses atrasados</option>
+      <option value="10">10 Meses atrasados</option>
+    </select>
+  </div>
+    <div class="col">
+      <select class="form-control" data-apartment="204" onchange="saveStatus('204', this.value)">
+        <option value="pago">Pago</option>
+        <option value="naoPago">Não Pago</option>
+        <option value="atrasado">Atrasado</option>
+    </select>
+    </div>
+  </div>
+  <!-- Apartamento 301 -->
+  <div class="row mb-2">
+    <div class="col">301</div>
+    <div class="col">Denilson</div>
+    <div class="col">(85)9.8809-0267</div>
+    <div class="col">
+    <select class="form-control" id="atraso_apartamento_301" name="atraso" data-apartamento="301">
+      <option value="0">Em Dias</option>
+      <option value="1">1 Mês atrasado</option>
+      <option value="2">2 Meses atrasados</option>
+      <option value="3">3 Meses atrasados</option>
+      <option value="4">4 Meses atrasados</option>
+      <option value="5">5 Meses atrasados</option>
+      <option value="6">6 Meses atrasados</option>
+      <option value="7">7 Meses atrasados</option>
+      <option value="8">8 Meses atrasados</option>
+      <option value="9">9 Meses atrasados</option>
+      <option value="10">10 Meses atrasados</option>
+    </select>
+  </div>
+    <div class="col">
+      <select class="form-control" data-apartment="301" onchange="saveStatus('301', this.value)">
+        <option value="pago">Pago</option>
+        <option value="naoPago">Não Pago</option>
+        <option value="atrasado">Atrasado</option>
+    </select>
+    </div>
+  </div>
+  <div class="row mb-2">
+      <!-- Apartamento 302 -->
+    <div class="col">302</div>
+    <div class="col">Cleina</div>
+    <div class="col">(85)9.8115-9734</div>
+    <div class="col">
+    <select class="form-control" id="atraso_apartamento_302" name="atraso" data-apartamento="302">
+      <option value="0">Em Dias</option>
+      <option value="1">1 Mês atrasado</option>
+      <option value="2">2 Meses atrasados</option>
+      <option value="3">3 Meses atrasados</option>
+      <option value="4">4 Meses atrasados</option>
+      <option value="5">5 Meses atrasados</option>
+      <option value="6">6 Meses atrasados</option>
+      <option value="7">7 Meses atrasados</option>
+      <option value="8">8 Meses atrasados</option>
+      <option value="9">9 Meses atrasados</option>
+      <option value="10">10 Meses atrasados</option>
+    </select>
+  </div>
+    <div class="col">
+      <select class="form-control" data-apartment="302" onchange="saveStatus('302', this.value)">
+        <option value="pago" class="status-pago">Pago</option>
+      <option value="naoPago" class="status-naoPago">Não Pago</option>
+      <option value="atrasado" class="status-atrasado">Atrasado</option>
+    </select>
+    </div>
+  </div>
+  <!-- Apartamento 303 -->
+  <div class="row mb-2">
+    <div class="col">303</div>
+    <div class="col">Larissa Borges</div>
+    <div class="col">(85)9.9181-2566</div>
+    <div class="col">
+    <select class="form-control" id="atraso_apartamento_303" name="atraso" data-apartamento="303">
+      <option value="0">Em Dias</option>
+      <option value="1">1 Mês atrasado</option>
+      <option value="2">2 Meses atrasados</option>
+      <option value="3">3 Meses atrasados</option>
+      <option value="4">4 Meses atrasados</option>
+      <option value="5">5 Meses atrasados</option>
+      <option value="6">6 Meses atrasados</option>
+      <option value="7">7 Meses atrasados</option>
+      <option value="8">8 Meses atrasados</option>
+      <option value="9">9 Meses atrasados</option>
+      <option value="10">10 Meses atrasados</option>
+    </select>
+  </div>
+    <div class="col">
+      <select class="form-control" data-apartment="303" onchange="saveStatus('303', this.value)">
+        <option value="pago" class="status-pago">Pago</option>
+      <option value="naoPago" class="status-naoPago">Não Pago</option>
+      <option value="atrasado" class="status-atrasado">Atrasado</option>
+    </select>
+    </div>
+  </div>
+  <!-- Apartamento 304 -->
+  <div class="row mb-2">
+    <div class="col">304</div>
+    <div class="col">Antonio Eliomar</div>
+    <div class="col">(85)9.9666-4992</div>
+    <div class="col">
+    <select class="form-control" id="atraso_apartamento_304" name="atraso" data-apartamento="304">
+      <option value="0">Em Dias</option>
+      <option value="1">1 Mês atrasado</option>
+      <option value="2">2 Meses atrasados</option>
+      <option value="3">3 Meses atrasados</option>
+      <option value="4">4 Meses atrasados</option>
+      <option value="5">5 Meses atrasados</option>
+      <option value="6">6 Meses atrasados</option>
+      <option value="7">7 Meses atrasados</option>
+      <option value="8">8 Meses atrasados</option>
+      <option value="9">9 Meses atrasados</option>
+      <option value="10">10 Meses atrasados</option>
+    </select>
+  </div>
+    <div class="col">
+      <select class="form-control" data-apartment="304" onchange="saveStatus('304', this.value)">
+        <option value="pago" class="status-pago">Pago</option>
+      <option value="naoPago" class="status-naoPago">Não Pago</option>
+      <option value="atrasado" class="status-atrasado">Atrasado</option>
+    </select>
+    </div>
+  </div>
+  <!-- Apartamento 401 -->
+  <div class="row mb-2">
+    <div class="col">401</div>
+    <div class="col">Regimar</div>
+    <div class="col">(85)9.9924-1578</div>
+    <div class="col">
+    <select class="form-control" id="atraso_apartamento_401" name="atraso" data-apartamento="401">
+      <option value="0">Em Dias</option>
+      <option value="1">1 Mês atrasado</option>
+      <option value="2">2 Meses atrasados</option>
+      <option value="3">3 Meses atrasados</option>
+      <option value="4">4 Meses atrasados</option>
+      <option value="5">5 Meses atrasados</option>
+      <option value="6">6 Meses atrasados</option>
+      <option value="7">7 Meses atrasados</option>
+      <option value="8">8 Meses atrasados</option>
+      <option value="9">9 Meses atrasados</option>
+      <option value="10">10 Meses atrasados</option>
+    </select>
+  </div>
+    <div class="col">
+      <select class="form-control" data-apartment="401" onchange="saveStatus('401', this.value)">
+        <option value="pago" class="status-pago">Pago</option>
+        <option value="naoPago" class="status-naoPago">Não Pago</option>
+        <option value="atrasado" class="status-atrasado">Atrasado</option>
+      </select>
+    </div>
+  </div>
+  <!-- Apartamento 402 -->
+  <div class="row mb-2">
+    <div class="col">402</div>
+    <div class="col">Denilson</div>
+    <div class="col">(85)9.8809-0267</div>
+    <div class="col">
+    <select class="form-control" id="atraso_apartamento_402" name="atraso" data-apartamento="402">
+      <option value="0">Em Dias</option>
+      <option value="1">1 Mês atrasado</option>
+      <option value="2">2 Meses atrasados</option>
+      <option value="3">3 Meses atrasados</option>
+      <option value="4">4 Meses atrasados</option>
+      <option value="5">5 Meses atrasados</option>
+      <option value="6">6 Meses atrasados</option>
+      <option value="7">7 Meses atrasados</option>
+      <option value="8">8 Meses atrasados</option>
+      <option value="9">9 Meses atrasados</option>
+      <option value="10">10 Meses atrasados</option>
+    </select>
+  </div>
+    <div class="col">
+      <select class="form-control" data-apartment="402" onchange="saveStatus('402', this.value)">
+        <option value="pago" class="status-pago">Pago</option>
+        <option value="naoPago" class="status-naoPago">Não Pago</option>
+        <option value="atrasado" class="status-atrasado">Atrasado</option>
+      </select>
+    </div>
+  </div>
+  <!-- Apartamento 403 -->
+  <div class="row mb-2">
+    <div class="col">403</div>
+    <div class="col">Denilson</div>
+    <div class="col">(85)9.8809-0267</div>
+    <div class="col">
+    <select class="form-control" id="atraso_apartamento_403" name="atraso" data-apartamento="403">
+      <option value="0">Em Dias</option>
+      <option value="1">1 Mês atrasado</option>
+      <option value="2">2 Meses atrasados</option>
+      <option value="3">3 Meses atrasados</option>
+      <option value="4">4 Meses atrasados</option>
+      <option value="5">5 Meses atrasados</option>
+      <option value="6">6 Meses atrasados</option>
+      <option value="7">7 Meses atrasados</option>
+      <option value="8">8 Meses atrasados</option>
+      <option value="9">9 Meses atrasados</option>
+      <option value="10">10 Meses atrasados</option>
+    </select>
+  </div>
+    <div class="col">
+        <select class="form-control" data-apartment="403" onchange="saveStatus('403', this.value)">
+            <option value="pago" class="status-pago">Pago</option>
+      <option value="naoPago" class="status-naoPago">Não Pago</option>
+      <option value="atrasado" class="status-atrasado">Atrasado</option>
+    </select>
+    </div>
+  </div>
+  <!-- Apartamento 404 -->
+  <div class="row mb-2">
+    <div class="col">404</div>
+    <div class="col">Leidy</div>
+    <div class="col">(85)9.8108-3011</div>
+    <div class="col">
+    <select class="form-control" id="atraso_apartamento_404" name="atraso" data-apartamento="404">
+      <option value="0">Em Dias</option>
+      <option value="1">1 Mês atrasado</option>
+      <option value="2">2 Meses atrasados</option>
+      <option value="3">3 Meses atrasados</option>
+      <option value="4">4 Meses atrasados</option>
+      <option value="5">5 Meses atrasados</option>
+      <option value="6">6 Meses atrasados</option>
+      <option value="7">7 Meses atrasados</option>
+      <option value="8">8 Meses atrasados</option>
+      <option value="9">9 Meses atrasados</option>
+      <option value="10">10 Meses atrasados</option>
+    </select>
+  </div>
+    <div class="col">
+        <select class="form-control" data-apartment="404" onchange="saveStatus('404', this.value)">
+            <option value="pago" class="status-pago">Pago</option>
+      <option value="naoPago" class="status-naoPago">Não Pago</option>
+      <option value="atrasado" class="status-atrasado">Atrasado</option>
+    </select>
+    </div>
+  </div>
+  <button class="btn btn-success" id="btnCompartilharNoWhatsApp">Compartilhar no WhatsApp</button>
+  <button class="btn btn-primary" id="btnSalvarComoJPG">Salvar como JPG</button>
+
+</div>
+
+<script src="html2canvas.js"></script>
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
