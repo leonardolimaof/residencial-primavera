@@ -14,43 +14,42 @@
   <img src="https://leonardolimaof.github.io/residencial-primavera/img/logo.png" alt="LogoMarca" style="height: 300px;">
   <h2>Lista de Residentes</h2>
   <p>Vencimento todo dia <strong>15</strong>. Pagamento disponivel apartir do dia <strong>01</strong> de todo mês!</p>
-  <div class="highlight">
-    <div class="row mb-2">
+  <div class="container">
+    <div class="row mb-2 font-weight-bold">
       <div class="col">Apartamento</div>
       <div class="col">Nome do Dono</div>
       <div class="col">Telefone</div>
       <div class="col">Contador de Atrasos</div>
       <div class="col">Status</div>
     </div>
-  </div>
-  <!-- Apartamento 101 -->
-  <div class="row mb-2">
-    <div class="col">101</div>
-    <div class="col">Leo Dulers</div>
-    <div class="col">(85)9.8627-8254</div>
-    <div class="col">
-    <select class="form-control" id="atraso_apartamento_101" name="atraso" data-apartamento="101">
-      <option value="0">Em Dias</option>
-      <option value="1">1 Mês atrasado</option>
-      <option value="2">2 Meses atrasados</option>
-      <option value="3">3 Meses atrasados</option>
-      <option value="4">4 Meses atrasados</option>
-      <option value="5">5 Meses atrasados</option>
-      <option value="6">6 Meses atrasados</option>
-      <option value="7">7 Meses atrasados</option>
-      <option value="8">8 Meses atrasados</option>
-      <option value="9">9 Meses atrasados</option>
-      <option value="10">10 Meses atrasados</option>
-    </select>
-  </div>
-    <div class="col">
-      <select class="form-control" data-apartment="101" onchange="saveStatus('101', this.value)">
-        <option value="pago" class="status-pago">Pago</option>
-      <option value="naoPago" class="status-naoPago">Não Pago</option>
-      <option value="atrasado" class="status-atrasado">Atrasado</option>
-    </select>
+  <!--Apartamento 101 -->
+    <div class="row mb-2">
+      <div class="col">101</div>
+      <div class="col">Leo Dulers</div>
+      <div class="col">(85)9.8627-8254</div>
+      <div class="col">
+        <select class="form-control" id="atraso_apartamento_101" name="atraso" data-apartamento="101">
+          <option value="0">Em Dias</option>
+          <option value="1">1 Mês atrasado</option>
+          <option value="2">2 Meses atrasados</option>
+          <option value="3">3 Meses atrasados</option>
+          <option value="4">4 Meses atrasados</option>
+          <option value="5">5 Meses atrasados</option>
+          <option value="6">6 Meses atrasados</option>
+          <option value="7">7 Meses atrasados</option>
+          <option value="8">8 Meses atrasados</option>
+          <option value="9">9 Meses atrasados</option>
+          <option value="10">10 Meses atrasados</option>
+        </select>
+      </div>
+      <div class="col">
+        <select class="form-control" data-apartment="101" onchange="saveStatus('101', this.value)">
+          <option value="pago" class="status-pago">Pago</option>
+          <option value="naoPago" class="status-naoPago">Não Pago</option>
+          <option value="atrasado" class="status-atrasado">Atrasado</option>
+        </select>
+      </div>
     </div>
-  </div>
   <!-- Apartamento 102 -->
   <div class="row mb-2">
     <div class="col">102</div>
@@ -475,6 +474,19 @@
   <button class="btn btn-primary" id="btnSalvarComoJPG">Salvar como JPG</button>
 
 </div>
+
+<footer class="footer mt-auto py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="mb-0">Leonardo Lima - Todos os direitos reservados</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <p class="mb-0">Versão 1.01</p>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <script src="html2canvas.js"></script>
 <!-- Bootstrap JS and jQuery -->
