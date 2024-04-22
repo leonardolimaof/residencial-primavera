@@ -60,6 +60,15 @@ document.getElementById('btnSalvarComoJPG').addEventListener('click', function()
 //API para compartilhar container como imagem no WhatsApp.
 
 document.getElementById('btnCompartilharNoWhatsApp').addEventListener('click', function() {
+  // Verificar se o usuário está acessando pelo celular
+  const isMobile = navigator.userAgent.match(/Mobile/i);
+
+  // Se não estiver acessando pelo celular, mostrar alerta
+  if (!isMobile) {
+    alert('Esta função é somente disponível por smartphone!');
+    return;
+  }
+
   // Capturar o elemento container
   const container = document.querySelector('.container');
 
@@ -68,10 +77,18 @@ document.getElementById('btnCompartilharNoWhatsApp').addEventListener('click', f
     // Converter o canvas para uma imagem PNG
     const imgData = canvas.toDataURL('image/png');
 
-    // Abrir uma janela para compartilhar no WhatsApp usando a API
-    window.open(`https://wa.me/?text=Confira%20este%20conteúdo%3A&media=${imgData}`, '_blank');
+    // Abrir as opções de compartilhamento do aparelho, compartilhando a imagem
+    navigator.share({
+      title: 'Confira este conteúdo:',
+      url: imgData
+    }).then(() => {
+      console.log('Compartilhado com sucesso!');
+    }).catch(error => {
+      alert('Erro ao compartilhar: ' + error.message);
+    });
   }).catch(error => {
     alert('Erro ao compartilhar no WhatsApp: ' + error.message);
   });
 });
+
 
